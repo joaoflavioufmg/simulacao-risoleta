@@ -1,0 +1,215 @@
+######################################################################
+# CONSOLIDATED SIMULATION REPORT
+# Run: cti
+# Generated: 2026-09-06 18:09:53
+######################################################################
+
+======================================================================
+>>> SYSTEM STABILITY CHECK
+======================================================================
+🎯 STABILITY INDEX: 1.52
+✅ Oversized system (capacity >> demand)
+
+======================================================================
+>>> SIMULATION RESULTS
+======================================================================
+============================================================
+📊 SIMULATION RESULTS (⏳ Duration: 8760 hours)
+WARM-UP: 720 hours | STATISTICS PERIOD: 8040 hours
+============================================================
+
+STABILITY INDEX: 1.52
+STATUS: Oversized system
+
+⏰ Average time in the system: 190.09 horas
+👥 Total number of entities processed: 1300
+⚙️  Throughput: 0.16 entities/hour
+📋 Active resources: ['ctiBeds']
+
+NOTE: Statistics based only on the post-warm-up period
+   (t > 720.0 hours)
+
+WORK IN PROCESS (WIP) METRICS:
+  Average WIP: 31.46 entities
+  Maximum WIP: 46 entities
+  Current WIP: 35 entities
+
+TOTAL TIME IN SYSTEM:
+  Average: 11405.23 time units
+  Std Dev: 15109.39
+  Min: 52.19
+  Max: 212322.96
+  Median: 6892.58
+  Based on: 1300 entities
+
+LITTLE'S LAW VERIFICATION:
+  L (Avg WIP): 31.46
+  lambda (Throughput): 0.0027 entities/time unit
+  W (Avg Time): 11405.23 time units
+  Expected WIP (lambda * W): 30.74
+  Difference: 2.3%
+  Status: Excellent match (Little's Law verified)
+
+======================================================================
+>>> WARM-UP PERIOD ANALYSIS
+======================================================================
+
+🔍 WARM-UP ANALYSIS:
+==================================================
+📋 ctiBeds:
+   Stabilization detected at: t=19655.9
+   Warm-up suggested: 23587.1 (20% margin)
+   Final average usage: 71.3%
+
+RECOMMENDATIONS:
+• Please note the charts to identify when usage stabilizes
+• The warm-up period should last at least until the stabilization point
+• Use a 20-30% additional margin on the stabilization time
+• Complex systems may require a longer warm-up period
+==================================================
+
+======================================================================
+>>> ACTIVITY METRICS
+======================================================================
+
+======================================================================
+>>> RESOURCE METRICS
+======================================================================
+
+======================================================================
+RESOURCE CONFIGURATION SUMMARY
+======================================================================
+
+Resource: ctiBeds
+  Type: Resource
+  Capacity: 50 units
+  Used by 5 block(s):
+    - CTI (PS): 1 units (2% of capacity)
+    - CTI (CC): 1 units (2% of capacity)
+    - CTI (CLIM): 1 units (2% of capacity)
+    - CTI (CLIC): 1 units (2% of capacity)
+    - CTI (MAT): 1 units (2% of capacity)
+  Maximum single allocation: 1 units (2% of capacity)
+
+----------------------------------------------------------------------
+DELAY-ONLY BLOCKS (No Resource Required):
+  Found 1 pure delay block(s):
+    - CTI prepara Encaminhamento (pure delay operation)
+  Note: These blocks perform time delays without consuming resources.
+======================================================================
+
+📈 METRICS BY RESOURCE:
+  ctiBeds (capacity: 50):
+    Utilization rate: 0.63
+    Time Busy: 482367.88 (100.0%)
+    Time Idle: 0.00 (0.0%)
+    Maximum in queue: 0
+    Maximum in service: 46
+    Average number in queue: 0.00
+    Average number in service: 31.34
+    Analysis (💡): System operating within expected parameters.
+
+
+======================================================================
+>>> ENTITY COUNTS
+======================================================================
+
+Entities created: 1453
+Entities disposed: 1300
+Entities in the system: 153
+
+======================================================================
+>>> BLOCK STATISTICS
+======================================================================
+
+BLOCK STATISTICS:
+
+Chegadas (CreateBlock):
+
+CTI (PS) (ProcessBlock):
+  Entities processed: 601
+  Average time in service: 11965.73
+  Average time in queue: 0.00
+
+CTI (CC) (ProcessBlock):
+  Entities processed: 497
+  Average time in service: 11021.54
+  Average time in queue: 0.00
+
+CTI (CLIM) (ProcessBlock):
+  Entities processed: 91
+  Average time in service: 11911.41
+  Average time in queue: 0.00
+
+CTI (CLIC) (ProcessBlock):
+  Entities processed: 88
+  Average time in service: 10817.95
+  Average time in queue: 0.00
+
+CTI (MAT) (ProcessBlock):
+  Entities processed: 23
+  Average time in service: 2743.73
+  Average time in queue: 0.00
+
+CTI prepara Encaminhamento (ProcessBlock):
+  Entities processed: 1300
+  Average time in service: 45.13
+  Average time in queue: 0.00
+
+Origem (DecideBlock):
+  Decision counts: {'do Pronto Socorro': 663, 'do Centro Cirurgico': 557, 'da Clinica Medica': 100, 'da Clinica Cirurgica': 105, 'da Maternidade': 27}
+
+Encaminha (DecideBlock):
+  Decision counts: {'para a Clinica Medica': 530, 'para a Clinica Cirurgica': 506, 'Obito': 273, 'Transferencia Externa': 82, 'para a Maternidade': 13, 'para o Centro Cirurgico': 10, 'para o Pronto Socorro': 0, 'Alta Hospitalar': 3}
+
+Saida_CLIM (DisposeBlock):
+
+Saida_CLIC (DisposeBlock):
+
+Saida_Death (DisposeBlock):
+
+Saida_Transf_Ext (DisposeBlock):
+
+Saida_CC (DisposeBlock):
+
+Saida_MAT (DisposeBlock):
+
+Saida_PS (DisposeBlock):
+
+Saida_AltaHosp (DisposeBlock):
+
+======================================================================
+>>> FINANCIAL BALANCE SHEET
+======================================================================
+
+============================================================
+FINANCIAL BALANCE SHEET
+============================================================
+
+Based on 1300 entities (post warm-up)
+
+REVENUE:
+  Total Revenue: $52,068,024.43
+  Average per Entity: $40,052.33
+
+COSTS BY ACTIVITY:
+  CTI (CC): $14,841,785.58 (43.8%)
+  CTI (PS): $13,614,818.92 (40.2%)
+  CTI (CLIC): $2,630,681.76 (7.8%)
+  CTI (CLIM): $2,369,214.23 (7.0%)
+  CTI (MAT): $415,016.60 (1.2%)
+  Chegadas: $32,389.15 (0.1%)
+
+  Total Costs: $33,903,906.25
+  Average per Entity: $26,079.93
+
+------------------------------------------------------------
+NET PROFIT: $18,164,118.18
+   Average per Entity: $13,972.40
+   Profit Margin: 34.9%
+   Excellent profit margin
+============================================================
+
+######################################################################
+# END OF REPORT
+######################################################################

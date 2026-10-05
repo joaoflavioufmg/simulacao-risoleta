@@ -1,0 +1,26 @@
+ICU PATIENT FLOW ANALYSIS
+Discrete Event Simulation (DES)
+======================================================================
+
+ICU CONFIGURATION:
+Total beds (c): 31
+
+CALCULATED METRICS:
+Total patients: 2844
+Period: 2024-01-01 11:54:00 to 2025-12-30 22:11:00
+Analysis days: 729.43
+
+DES PARAMETERS (M/M/c Queue):
+λ (lambda): 3.898943 patients/day
+μ (mu per bed): 0.132696 patients/day/bed
+c*μ (total capacity): 4.113584 patients/day
+ρ (rho): 0.947821
+L (avg occupancy): 29.38 beds
+Occupancy rate: 94.78%
+
+LENGTH OF STAY:
+Mean: 7.5360 days
+Std: 8.4782 days
+Median: 4.3781 days
+Min: 0.0007 days
+Max: 75.7229 days

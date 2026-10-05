@@ -1,0 +1,214 @@
+ICU ORIGIN AND DESTINATION ANALYSIS
+======================================================================
+
+ADMISSION SOURCES (ORIGINS)
+----------------------------------------------------------------------
+
+PRONTO SOCORRO:
+  Probability: 0.4501 (45.01%)
+  Count: 1280
+  Length of Stay:
+    Mean: 8.1090 days
+    Std: 7.8614 days
+    Median: 5.6573 days
+    CV: 0.9695
+  Best Distribution: gamma
+    Parameters:
+      shape (a) = 1.194434
+      loc = 0.000000
+      scale = 6.789006
+      Python: scipy.stats.gamma(a=1.194434, loc=0.000000, scale=6.789006)
+    P-value (KS test): 0.016184
+
+CENTRO CIRURGICO:
+  Probability: 0.3906 (39.06%)
+  Count: 1111
+  Length of Stay:
+    Mean: 7.1621 days
+    Std: 9.2598 days
+    Median: 3.5569 days
+    CV: 1.2929
+  Best Distribution: lognormal
+    Parameters:
+      shape (s) = 1.157794
+      loc = 0.000000
+      scale = 3.814787
+      Python: scipy.stats.lognorm(s=1.157794, loc=0.000000, scale=3.814787)
+    P-value (KS test): 0.001575
+
+CLINICA MEDICA:
+  Probability: 0.0745 (7.45%)
+  Count: 212
+  Length of Stay:
+    Mean: 8.4079 days
+    Std: 7.9339 days
+    Median: 5.9017 days
+    CV: 0.9436
+  Best Distribution: gamma
+    Parameters:
+      shape (a) = 1.057302
+      loc = 0.000000
+      scale = 7.952208
+      Python: scipy.stats.gamma(a=1.057302, loc=0.000000, scale=7.952208)
+    P-value (KS test): 0.623844
+
+CLINICA CIRURGICA:
+  Probability: 0.0721 (7.21%)
+  Count: 205
+  Length of Stay:
+    Mean: 6.0554 days
+    Std: 8.4295 days
+    Median: 2.9076 days
+    CV: 1.3921
+  Best Distribution: lognormal
+    Parameters:
+      shape (s) = 1.228890
+      loc = 0.000000
+      scale = 3.158045
+      Python: scipy.stats.lognorm(s=1.228890, loc=0.000000, scale=3.158045)
+    P-value (KS test): 0.174571
+
+MATERNIDADE:
+  Probability: 0.0127 (1.27%)
+  Count: 36
+  Length of Stay:
+    Mean: 1.9970 days
+    Std: 1.3402 days
+    Median: 1.6535 days
+    CV: 0.6711
+  Best Distribution: lognormal
+    Parameters:
+      shape (s) = 0.574351
+      loc = 0.000000
+      scale = 1.678341
+      Python: scipy.stats.lognorm(s=0.574351, loc=0.000000, scale=1.678341)
+    P-value (KS test): 0.292294
+
+
+DISCHARGE DESTINATIONS
+----------------------------------------------------------------------
+
+CLINICA MEDICA:
+  Probability: 0.3906 (39.06%)
+  Count: 1111
+  Length of Stay:
+    Mean: 9.9286 days
+    Std: 9.8002 days
+    Median: 6.6743 days
+    CV: 0.9871
+  Best Distribution: lognormal
+    Parameters:
+      shape (s) = 1.005263
+      loc = 0.000000
+      scale = 6.420501
+      Python: scipy.stats.lognorm(s=1.005263, loc=0.000000, scale=6.420501)
+    P-value (KS test): 0.232550
+
+CLINICA CIRURGICA:
+  Probability: 0.3344 (33.44%)
+  Count: 951
+  Length of Stay:
+    Mean: 4.6860 days
+    Std: 5.9707 days
+    Median: 2.7674 days
+    CV: 1.2741
+  Best Distribution: lognormal
+    Parameters:
+      shape (s) = 0.925045
+      loc = 0.000000
+      scale = 2.921193
+      Python: scipy.stats.lognorm(s=0.925045, loc=0.000000, scale=2.921193)
+    P-value (KS test): 0.001040
+
+OBITO:
+  Probability: 0.2032 (20.32%)
+  Count: 578
+  Length of Stay:
+    Mean: 8.3958 days
+    Std: 8.2020 days
+    Median: 6.1431 days
+    CV: 0.9769
+  Best Distribution: exponential
+    Parameters:
+      loc = 0.000694
+      scale = 8.395103
+      Python: scipy.stats.expon(loc=0.000694, scale=8.395103)
+    P-value (KS test): 0.279306
+
+TRANSFERENCIA EXTERNA:
+  Probability: 0.0517 (5.17%)
+  Count: 147
+  Length of Stay:
+    Mean: 6.0519 days
+    Std: 6.7615 days
+    Median: 3.2299 days
+    CV: 1.1172
+  Best Distribution: gamma
+    Parameters:
+      shape (a) = 0.903268
+      loc = 0.000000
+      scale = 6.699995
+      Python: scipy.stats.gamma(a=0.903268, loc=0.000000, scale=6.699995)
+    P-value (KS test): 0.290522
+
+MATERNIDADE:
+  Probability: 0.0102 (1.02%)
+  Count: 29
+  Length of Stay:
+    Mean: 1.4858 days
+    Std: 0.3990 days
+    Median: 1.6153 days
+    CV: 0.2685
+  Best Distribution: gamma
+    Parameters:
+      shape (a) = 12.430581
+      loc = 0.000000
+      scale = 0.119526
+      Python: scipy.stats.gamma(a=12.430581, loc=0.000000, scale=0.119526)
+    P-value (KS test): 0.333012
+
+CENTRO CIRURGICO:
+  Probability: 0.0067 (0.67%)
+  Count: 19
+  Length of Stay:
+    Mean: 7.5092 days
+    Std: 10.9360 days
+    Median: 4.0597 days
+    CV: 1.4563
+  Best Distribution: exponential
+    Parameters:
+      loc = 0.002083
+      scale = 7.507164
+      Python: scipy.stats.expon(loc=0.002083, scale=7.507164)
+    P-value (KS test): 0.562341
+
+PRONTO SOCORRO:
+  Probability: 0.0018 (0.18%)
+  Count: 5
+  Length of Stay:
+    Mean: 0.3560 days
+    Std: 0.7323 days
+    Median: 0.0146 days
+    CV: 2.0572
+  Best Distribution: lognormal
+    Parameters:
+      shape (s) = 2.158061
+      loc = 0.000000
+      scale = 0.037706
+      Python: scipy.stats.lognorm(s=2.158061, loc=0.000000, scale=0.037706)
+    P-value (KS test): 0.777388
+
+ALTA HOSPITALAR:
+  Probability: 0.0014 (0.14%)
+  Count: 4
+  Length of Stay:
+    Mean: 3.8319 days
+    Std: 2.3873 days
+    Median: 2.9066 days
+    CV: 0.6230
+  Best Distribution: exponential
+    Parameters:
+      loc = 2.143750
+      scale = 1.688194
+      Python: scipy.stats.expon(loc=2.143750, scale=1.688194)
+    P-value (KS test): 0.575291
