@@ -1,0 +1,97 @@
+[build-system]
+requires = ["setuptools>=60"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "desk-sim"
+version = "4.0.0"
+description = "DESK: Discrete Event Simulation Kit"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+license = { text = "GPL-3.0" }
+
+authors = [
+  { name = "João Flávio de Freitas Almeida", email = "joao.flavio@dep.ufmg.br" }
+]
+
+keywords = [
+  "discrete-event-simulation",
+  "simulation",
+  "operations-research",
+  "healthcare",
+  "logistics",
+  "analytics"
+]
+
+classifiers = [
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering",
+  "License :: OSI Approved :: GPL-3.0 License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11"
+]
+
+dependencies = [
+  "numpy==2.2.6",
+  "scipy==1.15.3",
+  "pandas==2.3.1",
+  "matplotlib==3.10.5",
+  "seaborn==0.13.2",
+  "simpy==4.1.1"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-cov",
+  "black",
+  "isort",
+  "flake8",
+  "build",
+  "twine",
+  "mkdocs",
+  "mkdocs-material"
+]
+
+[project.urls]
+Homepage = "https://joaoflavioufmg.github.io/desk"
+Repository = "https://github.com/joaoflavioufmg/desk"
+Documentation = "https://desk-sim.readthedocs.io/en/latest"
+
+# =========================
+# CLI entry points
+# =========================
+[project.scripts]
+desk-sim = "desk.__main__:main"
+desk-distfit = "desk.distfit.distfit:main"
+
+# =========================
+# setuptools + src layout
+# =========================
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = [
+  "tests*",
+  "docs*",
+  "examples*",
+  "scripts*",
+  "venv*"
+]
+
+# =========================
+# Tooling
+# =========================
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"

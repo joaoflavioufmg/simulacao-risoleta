@@ -1,0 +1,38 @@
+# Qual python esta instalado na máquina? 
+> py -0
+
+# Resultados de exemplo (o * significa a versão python ativa)
+ -V:3.14 *        Python 3.14 (64-bit)
+ -V:3.13          Python 3.13 (64-bit)
+ -V:3.12          Python 3.12 (64-bit)
+ -V:3.10          Python 3.10 (64-bit)
+ 
+# Instale o python 3.12.7
+
+Windows (64-bit): https://www.python.org/ftp/python/3.12.7/python-3.12.7-amd64.exe
+Windows (32-bit): https://www.python.org/ftp/python/3.12.7/python-3.12.7-win32.exe
+
+# Info e botão de download: https://www.python.org/downloads/release/python-3127/
+
+# Digite
+> py -3.12
+
+Python 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+
+# Digite
+>>> exit()
+
+# Digite
+> py -3.12 -m venv venv
+> . .\venv\Scripts\Activate.ps1
+
+# Você verá:
+(venv) PS C:\...\simulacao-risoleta>
+
+# Digite:
+> py --version
+
+# Você verá:
+Python 3.12.7
