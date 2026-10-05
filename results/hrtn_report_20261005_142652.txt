@@ -1,0 +1,390 @@
+######################################################################
+# CONSOLIDATED SIMULATION REPORT
+# Run: hrtn
+# Generated: 2026-10-05 14:26:52
+######################################################################
+
+======================================================================
+>>> SYSTEM STABILITY CHECK
+======================================================================
+🎯 STABILITY INDEX: 0.05
+💥 IMMINENT COLLAPSE (demand >> capacity)
+
+======================================================================
+>>> SIMULATION RESULTS
+======================================================================
+============================================================
+📊 SIMULATION RESULTS (⏳ Duration: 8760 hours)
+WARM-UP: 744 hours | STATISTICS PERIOD: 8016 hours
+============================================================
+
+STABILITY INDEX: 0.05
+STATUS: IMMINENT COLLAPSE
+
+⏰ Average time in the system: 43.91 horas
+👥 Total number of entities processed: 71821
+⚙️  Throughput: 8.96 entities/hour
+📋 Active resources: ['CC_Rooms', 'srpaBeds', 'psBeds', 'climBeds', 'ctiBeds', 'clicBeds', 'matBeds', 'ambRooms']
+
+NOTE: Statistics based only on the post-warm-up period
+   (t > 744.0 hours)
+
+WORK IN PROCESS (WIP) METRICS:
+  Average WIP: 395.61 entities
+  Maximum WIP: 495 entities
+  Current WIP: 429 entities
+
+TOTAL TIME IN SYSTEM:
+  Average: 2634.58 time units
+  Std Dev: 4639.86
+  Min: 1.57
+  Max: 68601.87
+  Median: 949.48
+  Based on: 71821 entities
+
+LITTLE'S LAW VERIFICATION:
+  L (Avg WIP): 395.61
+  lambda (Throughput): 0.1493 entities/time unit
+  W (Avg Time): 2634.58 time units
+  Expected WIP (lambda * W): 393.42
+  Difference: 0.6%
+  Status: Excellent match (Little's Law verified)
+
+======================================================================
+>>> WARM-UP PERIOD ANALYSIS
+======================================================================
+
+🔍 WARM-UP ANALYSIS:
+==================================================
+📋 ambRooms:
+   System may not be completely stabilized
+   Final average usage: 10.2%
+📋 CC_Rooms:
+   Stabilization detected at: t=31975.6
+   Warm-up suggested: 38370.7 (20% margin)
+   Final average usage: 93.4%
+📋 srpaBeds:
+   Stabilization detected at: t=5521.0
+   Warm-up suggested: 6625.2 (20% margin)
+   Final average usage: 96.2%
+📋 clicBeds:
+   Stabilization detected at: t=5562.5
+   Warm-up suggested: 6675.0 (20% margin)
+   Final average usage: 90.6%
+📋 climBeds:
+   Stabilization detected at: t=2540.4
+   Warm-up suggested: 3048.4 (20% margin)
+   Final average usage: 65.3%
+📋 ctiBeds:
+   Stabilization detected at: t=17512.1
+   Warm-up suggested: 21014.5 (20% margin)
+   Final average usage: 98.9%
+📋 matBeds:
+   Stabilization detected at: t=2839.8
+   Warm-up suggested: 3407.8 (20% margin)
+   Final average usage: 29.0%
+📋 psBeds:
+   Stabilization detected at: t=533.8
+   Warm-up suggested: 640.5 (20% margin)
+   Final average usage: 77.4%
+
+RECOMMENDATIONS:
+• Please note the charts to identify when usage stabilizes
+• The warm-up period should last at least until the stabilization point
+• Use a 20-30% additional margin on the stabilization time
+• Complex systems may require a longer warm-up period
+==================================================
+
+======================================================================
+>>> ACTIVITY METRICS
+======================================================================
+
+======================================================================
+>>> RESOURCE METRICS
+======================================================================
+
+======================================================================
+RESOURCE CONFIGURATION SUMMARY
+======================================================================
+
+Resource: CC_Rooms
+  Type: Resource
+  Capacity: 5 units
+  Used by 1 block(s):
+    - CC: 1 units (20% of capacity)
+  Maximum single allocation: 1 units (20% of capacity)
+
+Resource: ambRooms
+  Type: Resource
+  Capacity: 5 units
+  Used by 1 block(s):
+    - AMB: 1 units (20% of capacity)
+  Maximum single allocation: 1 units (20% of capacity)
+
+Resource: clicBeds
+  Type: Resource
+  Capacity: 95 units
+  Used by 1 block(s):
+    - CLIC: 1 units (1% of capacity)
+  Maximum single allocation: 1 units (1% of capacity)
+
+Resource: climBeds
+  Type: Resource
+  Capacity: 164 units
+  Used by 1 block(s):
+    - CLIM: 1 units (1% of capacity)
+  Maximum single allocation: 1 units (1% of capacity)
+
+Resource: ctiBeds
+  Type: Resource
+  Capacity: 31 units
+  Used by 1 block(s):
+    - CTI: 1 units (3% of capacity)
+  Maximum single allocation: 1 units (3% of capacity)
+
+Resource: matBeds
+  Type: Resource
+  Capacity: 30 units
+  Used by 1 block(s):
+    - MAT: 1 units (3% of capacity)
+  Maximum single allocation: 1 units (3% of capacity)
+
+Resource: psBeds
+  Type: Resource
+  Capacity: 110 units
+  Used by 1 block(s):
+    - PS: 1 units (1% of capacity)
+  Maximum single allocation: 1 units (1% of capacity)
+
+Resource: srpaBeds
+  Type: Resource
+  Capacity: 13 units
+  Used by 1 block(s):
+    - SRPA: 1 units (8% of capacity)
+  Maximum single allocation: 1 units (8% of capacity)
+
+----------------------------------------------------------------------
+DELAY-ONLY BLOCKS (No Resource Required):
+  Found 8 pure delay block(s):
+    - ALTA_HOSP (pure delay operation)
+    - ALTA_HOSP (pure delay operation)
+    - ALTA_HOSP (pure delay operation)
+    - ALTA_HOSP (pure delay operation)
+    - ALTA_HOSP (pure delay operation)
+    - ALTA_HOSP (pure delay operation)
+    - ALTA_HOSP (pure delay operation)
+    - ALTA_HOSP (pure delay operation)
+  Note: These blocks perform time delays without consuming resources.
+======================================================================
+
+📈 METRICS BY RESOURCE:
+  ambRooms (capacity: 5):
+    Utilization rate: 0.03
+    Time Busy: 77520.23 (16.1%)
+    Time Idle: 403430.90 (83.9%)
+    Maximum in queue: 0
+    Maximum in service: 3
+    Average number in queue: 0.00
+    Average number in service: 0.17
+    Analysis (💡): Idle system (3.5%)! Consider adjusting capacity.
+
+  CC_Rooms (capacity: 5):
+    Utilization rate: 0.68
+    Time Busy: 462241.80 (96.1%)
+    Time Idle: 18699.89 (3.9%)
+    Maximum in queue: 10
+    Maximum in service: 5
+    Average number in queue: 2.06
+    Average number in service: 3.40
+    Analysis (💡): System operating within expected parameters.
+
+  srpaBeds (capacity: 13):
+    Utilization rate: 0.67
+    Time Busy: 479865.27 (99.8%)
+    Time Idle: 1076.42 (0.2%)
+    Maximum in queue: 5
+    Maximum in service: 13
+    Average number in queue: 0.47
+    Average number in service: 8.75
+    Analysis (💡): System operating within expected parameters.
+
+  clicBeds (capacity: 95):
+    Utilization rate: 0.93
+    Time Busy: 480959.18 (100.0%)
+    Time Idle: 0.00 (0.0%)
+    Maximum in queue: 36
+    Maximum in service: 95
+    Average number in queue: 2.70
+    Average number in service: 88.02
+    Analysis (💡): Overloaded system (92.6%)! Consider expanding capacity.
+
+  climBeds (capacity: 164):
+    Utilization rate: 0.74
+    Time Busy: 480934.09 (100.0%)
+    Time Idle: 0.00 (0.0%)
+    Maximum in queue: 0
+    Maximum in service: 162
+    Average number in queue: 0.00
+    Average number in service: 121.71
+    Analysis (💡): System operating within expected parameters.
+
+  ctiBeds (capacity: 31):
+    Utilization rate: 0.94
+    Time Busy: 480929.47 (100.0%)
+    Time Idle: 0.00 (0.0%)
+    Maximum in queue: 31
+    Maximum in service: 31
+    Average number in queue: 5.79
+    Average number in service: 29.18
+    Analysis (💡): Overloaded system (94.1%)! Consider expanding capacity.
+
+  matBeds (capacity: 30):
+    Utilization rate: 0.20
+    Time Busy: 475973.28 (99.0%)
+    Time Idle: 4977.84 (1.0%)
+    Maximum in queue: 0
+    Maximum in service: 21
+    Average number in queue: 0.00
+    Average number in service: 6.03
+    Analysis (💡): Idle system (20.1%)! Consider adjusting capacity.
+
+  psBeds (capacity: 110):
+    Utilization rate: 0.52
+    Time Busy: 480955.19 (100.0%)
+    Time Idle: 0.00 (0.0%)
+    Maximum in queue: 21
+    Maximum in service: 110
+    Average number in queue: 0.02
+    Average number in service: 57.14
+    Analysis (💡): System operating within expected parameters.
+
+
+======================================================================
+>>> ENTITY COUNTS
+======================================================================
+
+Entities created: 78454
+Entities disposed: 71821
+Entities in the system: 6633
+
+======================================================================
+>>> BLOCK STATISTICS
+======================================================================
+
+BLOCK STATISTICS:
+
+Chegadas_PS (CreateBlock):
+
+Chegadas_MAT (CreateBlock):
+
+AMB (ProcessBlock):
+  Entities processed: 515
+  Average time in service: 163.17
+  Average time in queue: 0.00
+
+CC (ProcessBlock):
+  Entities processed: 4835
+  Average time in service: 276.67
+  Average time in queue: 223.86
+
+SRPA (ProcessBlock):
+  Entities processed: 4838
+  Average time in service: 547.25
+  Average time in queue: 61.05
+
+CLIC (ProcessBlock):
+  Entities processed: 8706
+  Average time in service: 4801.74
+  Average time in queue: 158.47
+
+CLIM (ProcessBlock):
+  Entities processed: 10940
+  Average time in service: 5289.03
+  Average time in queue: 0.00
+
+CTI (ProcessBlock):
+  Entities processed: 1921
+  Average time in service: 7239.34
+  Average time in queue: 1538.48
+
+MAT (ProcessBlock):
+  Entities processed: 17532
+  Average time in service: 162.03
+  Average time in queue: 0.00
+
+PS (ProcessBlock):
+  Entities processed: 55418
+  Average time in service: 437.11
+  Average time in queue: 0.16
+
+PS_Encaminha (DecideBlock):
+  Decision counts: {'Alta Hospitalar': 32837, 'Desistencia/Evasao': 7177, 'para a Clinica Medica': 10130, 'para a Clinica Cirurgica': 4835, 'para o Centro Cirurgico': 3730, 'Transferencia Externa': 738, 'para o CTI': 792, 'Obito': 102, 'para o Ambulatorio': 65, 'para a Maternidade': 58}
+
+MAT_Encaminha (DecideBlock):
+  Decision counts: {'Alta Hospitalar': 18357, 'Desistencia/Evasao': 327, 'Transferencia Externa': 159, 'para a Clinica Cirurgica': 44, 'para a Clinica Medica': 48, 'para o Pronto Socorro': 13, 'para o Centro Cirurgico': 81, 'para o Ambulatorio': 82, 'para o CTI': 17, 'Obito': 0}
+
+CLIM_Encaminha (DecideBlock):
+  Decision counts: {'Alta Hospitalar': 7496, 'Obito': 950, 'Transferencia Externa': 893, 'para a Clinica Cirurgica': 334, 'para o Centro Cirurgico': 766, 'para o Pronto Socorro': 873, 'Desistencia/Evasao': 148, 'para o CTI': 227, 'para o Ambulatorio': 45, 'para a Maternidade': 25}
+
+AMB_Encaminha (DecideBlock):
+  Decision counts: {'Alta Hospitalar': 552, 'Desistencia/Evasao': 0, 'para a Clinica Cirurgica': 7, 'para a Clinica Medica': 0, 'Transferencia Externa': 0, 'para a Maternidade': 0}
+
+CC_Encaminha (DecideBlock):
+  Decision counts: {'Alta Hospitalar': 250, 'para a Clinica Cirurgica': 3553, 'para o CTI': 819, 'para a Clinica Medica': 477, 'para o Pronto Socorro': 93, 'para a Maternidade': 20, 'Obito': 20, 'para o Ambulatorio': 6, 'Transferencia Externa': 10, 'Desistencia/Evasao': 7}
+
+CLIC_Encaminha (DecideBlock):
+  Decision counts: {'Alta Hospitalar': 5991, 'Transferencia Externa': 1491, 'para o Ambulatorio': 361, 'para a Clinica Medica': 364, 'Desistencia/Evasao': 144, 'para o CTI': 245, 'para o Centro Cirurgico': 640, 'Obito': 34, 'para o Pronto Socorro': 100, 'para a Maternidade': 1}
+
+CTI_Encaminha (DecideBlock):
+  Decision counts: {'Alta Hospitalar': 0, 'para a Clinica Medica': 847, 'para a Clinica Cirurgica': 683, 'Obito': 338, 'Transferencia Externa': 94, 'para a Maternidade': 22, 'para o Centro Cirurgico': 60, 'para o Pronto Socorro': 12}
+
+ALTA_HOSP (ProcessBlock):
+  Entities processed: 60246
+  Average time in service: 632.39
+  Average time in queue: 0.00
+
+Saida_AltaHosp (DisposeBlock):
+
+Saida_Desist (DisposeBlock):
+
+Saida_Transf_Ext (DisposeBlock):
+
+Saida_Obito (DisposeBlock):
+
+======================================================================
+>>> FINANCIAL BALANCE SHEET
+======================================================================
+
+============================================================
+FINANCIAL BALANCE SHEET
+============================================================
+
+Based on 71821 entities (post warm-up)
+
+REVENUE:
+  Total Revenue: $27,499,045.77
+  Average per Entity: $382.88
+
+COSTS BY ACTIVITY:
+  PS: $32,518,791.16 (37.5%)
+  MAT: $21,916,599.35 (25.3%)
+  CLIM: $9,978,409.13 (11.5%)
+  CC: $8,627,707.25 (10.0%)
+  CLIC: $7,729,273.68 (8.9%)
+  CTI: $5,830,116.91 (6.7%)
+  AMB: $102,199.04 (0.1%)
+  Chegadas: $0.00 (0.0%)
+
+  Total Costs: $86,703,096.54
+  Average per Entity: $1,207.21
+
+------------------------------------------------------------
+NET PROFIT: $-59,204,050.77
+   Average per Entity: $-824.33
+   Profit Margin: -215.3%
+   Operating at a loss!
+============================================================
+
+######################################################################
+# END OF REPORT
+######################################################################

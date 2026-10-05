@@ -21,6 +21,8 @@ Performance notes (why this version is fast):
 streamlit run hrtn_app.py
 """
 
+# streamlit run hrtn_app.py
+
 from pathlib import Path
 import io
 import re
@@ -198,7 +200,7 @@ def _reduce_to_last_n_days(df: pd.DataFrame, n_days: int) -> pd.DataFrame:
 
 
 @st.cache_data(show_spinner="Carregando event log...")
-def load_log(file_bytes: bytes, n_days: int = 7) -> pd.DataFrame:
+def load_log(file_bytes: bytes, n_days: int = 365) -> pd.DataFrame:
     df = pd.read_csv(io.BytesIO(file_bytes))
 
     required = {"case_id", "activity", "timestamp"}
@@ -337,7 +339,7 @@ def _extract_flows(df: pd.DataFrame) -> pd.DataFrame:
 
 
 @st.cache_data(show_spinner="Calculando métricas do hospital...")
-def build_metrics(df: pd.DataFrame, n_days: int = 7) -> dict:
+def build_metrics(df: pd.DataFrame, n_days: int = 365) -> dict:
     window_minutes = n_days * 1440
     max_ts = float(df["timestamp"].max()) if not df.empty else 0.0
     window_start = max(max_ts - window_minutes, float(df["timestamp"].min()) if not df.empty else 0.0)
@@ -560,7 +562,7 @@ n_days = st.sidebar.slider(
     "Janela de análise (dias)",
     min_value=1,
     max_value=365,
-    value=7,
+    value=365,
     step=1,
     help="Quantidade de dias finais do event log a serem considerados na análise. "
          "Jornadas completas de pacientes que tocam a janela são preservadas.",

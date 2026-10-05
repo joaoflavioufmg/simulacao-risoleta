@@ -76,10 +76,10 @@ def build_model(final_simulation_time=None, event_logger=None, verbose=True,
         }.get(tipo,0.0)    
     
     
-    # ctiBeds = model.add_resource("ctiBeds", 31, "regular") 
+    ctiBeds = model.add_resource("ctiBeds", 31, "regular") 
     # ctiBeds = model.add_resource("ctiBeds", 35, "regular") 
     # ctiBeds = model.add_resource("ctiBeds", 40, "regular") 
-    ctiBeds = model.add_resource("ctiBeds", 50, "regular") 
+    # ctiBeds = model.add_resource("ctiBeds", 50, "regular") 
     # nurses = model.add_resource("nurses", 4, "regular") 
     # nursingTech = model.add_resource("nursingTech", 18, "regular") 
     # physicians = model.add_resource("physicians", 4, "regular") 

@@ -31,10 +31,10 @@ from desk.analytics.report_builder import MasterReportBuilder
 # ================================================================
 # Each ACD model is implemented here
 # ================================================================
-# desk-sim -m src/cc.py --mode visualization
-# desk-sim -m src/cc.py --mode single
-# desk-sim -m src/cc.py --mode replications
-# desk-sim -m src/cc.py --mode factorial
+# desk-sim -m cc/cc.py --mode visualization
+# desk-sim -m cc/cc.py --mode single
+# desk-sim -m cc/cc.py --mode replications
+# desk-sim -m cc/cc.py --mode factorial
 
 # ================================================================
 # Desk-sim: DIST-FIT Which is the best data distribution?

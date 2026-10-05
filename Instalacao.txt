@@ -36,3 +36,19 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 # Você verá:
 Python 3.12.7
+
+# Digite:
+> pip install -r .\requirements.txt
+
+# Atualize alguns arquivos do desk:
+# Vá em: \venv\src\desk-sim\src\desk
+analytics\plotting.py
+analytics\report_builder.py
+
+blocks\decide_block.py
+blocks\process_block.py
+
+core\base_block.py
+core\event_tracer.py
+
+visualization\interface.py
