@@ -20,7 +20,7 @@ col_logo_esq, col_titulo, col_logo_dir = st.columns([1, 6, 1])
 with col_logo_esq:
     # Substitua pelo caminho da sua logo esquerda (ex: URL, arquivo local .png/.jpg)
     # Dica: use o parâmetro width para ajustar o tamanho médio desejado (ex: 120 a 180 pixels)
-    caminho_logo_esq = "../../figs/Logo_UFMG.png"  # Ajuste para o seu arquivo ou URL
+    caminho_logo_esq = "../figs/Logo_UFMG.png"  # Ajuste para o seu arquivo ou URL
     if Path(caminho_logo_esq).exists():
         st.image(caminho_logo_esq, width=180)
     else:
@@ -50,7 +50,7 @@ with col_titulo:
 
 with col_logo_dir:
     # Substitua pelo caminho da sua logo direita
-    caminho_logo_dir = "../../figs/logo_risoleta.png"  # Ajuste para o seu arquivo ou URL
+    caminho_logo_dir = "../figs/logo_risoleta.png"  # Ajuste para o seu arquivo ou URL
     if Path(caminho_logo_dir).exists():
         st.image(caminho_logo_dir, width=180)
     else:
